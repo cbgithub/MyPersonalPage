@@ -5,7 +5,7 @@
 	$subject = "Node Contact Form";
 
 	// You can put here your email
-	$header = "From: noreply@yoursite.com\r\n";
+	$header = "From: cburdettejsu@gmail.com\r\n";
 	$header.= "MIME-Version: 1.0\r\n";
 	$header.= "Content-Type: text/plain; charset=utf-8\r\n";
 	$header.= "X-Priority: 1\r\n";
