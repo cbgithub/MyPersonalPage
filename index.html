@@ -1,162 +1,192 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="This is a page of all Blogs by Christopher Burdette">
     <meta name="author" content="Christopher Burdette">
     <title>Home - Breaking Up With Debt</title>
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="assets/images/heart2.png">
     <link rel="apple-touch-icon" href="../../../assets/images/heart2.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/images/heart2.png">
     <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/images/heart2.png">
-    <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style4.css">
+
     <!-- Web Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Suranna" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-    <!-- Bootstrap core CSS-->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Icon Fonts-->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-social.css" rel="stylesheet">
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <!-- Plugins-->
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
     <link href="assets/css/vertical.min.css" rel="stylesheet">
-    <!-- Template core CSS-->
-    <link href="assets/css/template.css" rel="stylesheet">
 
 </head>
 
-<body class="d-flex flex-column h-100">
-     
-    <!-- Preloader-->
-    <div class="page-loader">
+<body>
 
-        <div class="loader">Loading...</div>
-    </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Christopher Burdette</h3>
+                <strong>CB</strong>
+            </div>
 
-    <!-- Preloader end-->
-    <!-- Show menu-->
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="/index.html">
+                        <i class="fa fa-home"></i>
+                        Home
+                    </a>
 
-    <div class="show-menu-btn">
-
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <!-- Show menu end-->
-    <!-- Menu-->
-    <div class="overlay-menu">
-        <div class="menu-table">
-           
-            <div class="menu-table-cell">
-                <ul class="navigation">
-                        <li><a href="/index.html">Home</a></li>
-                    <li><a href="about/./">About Me</a></li>
-                    <li><a
-                        href="https://docs.google.com/document/d/1BUPqjQkpaXzQAWXZKGiDExSNSEYp9Wc5RhRFOrDoaeg/edit?usp=sharing">Resume</a>
                 </li>
-                    <li><a href="contact/./">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+                <li>
+                    <a href="about/./">
+                        <i class="fa fa-briefcase"></i>
+                        About
+                    </a>
+                    <a
+                        href="https://docs.google.com/document/d/1BUPqjQkpaXzQAWXZKGiDExSNSEYp9Wc5RhRFOrDoaeg/edit?usp=sharing">
+                        <i class="fa fa-copy"></i>
+                        Resume
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="contact/./">
+                        <i class="fa fa-paper-plane"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-inline">
+                <li> <a href="https://www.facebook.com/christopher.burdette.50" target="_blank">Facebook <i
+                            class="fa fa-facebook fa-3x"></i>
+                    </a> </li>
+                <li> <a href="https://github.com/cbgithub" target="_blank">Github <i class="fa fa-github fa-3x"></i>
+                    </a> </li>
 
 
-    <!-- Menu end-->
-    <main role="main" class="flex-shrink-0">
-        <div class="container">
-            <div class="tableview">
-                <div class="row">
-                    <div class="col-md-6" style="text-align:center;">
-                        <!-- Hero section-->
+                <li> <a href="https://www.instagram.com/iamchrisburdette/" target="_blank">Instagram <i
+                            class="fa fa-instagram fa-3x"></i>
+                    </a> </li>
 
-                        <section class="split-image parallax" data-background="assets/images/blog/money.jpg"></section>
+                <li> <a href="https://www.linkedin.com/in/chrisburdette/" target="_blank">LinkedIn <i
+                            class="fa fa-linkedin fa-3x"></i>
+                    </a> </li>
 
-                        <!-- Hero section end-->
+            </ul>
 
-                        <section class="split-content">
+            <p>© 2018. All rights reserved.</p>
+
+
+
+        </nav>
+        <!-- End Sidebar  -->
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about/./">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="https://docs.google.com/document/d/1BUPqjQkpaXzQAWXZKGiDExSNSEYp9Wc5RhRFOrDoaeg/edit?usp=sharing">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact/./">Contact</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-md-6">
-                            <!-- Page content-->
-                            <section class="module">
-    
-                                <div class="container-fluid container-custom">
-                                    <!-- Posts-->
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <!-- BLOG POST-->
-                                            <article class="post">
-    
-    
-                                                <div class="post-header">
-                                                    <h2 class="post-title"><a href="blogs/2019/05/how-to-pay-off-debt.html">How I Thanos
-                                                            Snapped My Debt Of $48,315 At The Age Of 26</a></h2>
-                                                    <ul class="post-meta">
-                                                        <li><span>MAY 11, 2019 BY CHRISTOPHER BURDETTE</span></li>
-    
-                                                    </ul>
-                                                </div>
-                                                <div class="post-content">
-                                                    <p> Greetings! I have posted a blog about my debt-free journey. This
-                                                        blog is for anyone who wants to learn the steps it takes to get rid
-                                                        of debt no matter the circumstances. Hope you enjoy!</p>
-                                                    <a href="blogs/2019/05/how-to-pay-off-debt.html">Read More →</a>
-                                                </div>
-                                            </article>
-                                            <!-- END BLOG POST-->
-    
-                                        </div>
-                                    </div>
-                                    <!-- Posts end-->
-    
-                                </div>
-                            </section>
-                            <!-- Page content end-->
-    
-                        </div>
-
                 </div>
-            </div>
-        </div>
+            </nav>
 
-       
-    </main>
+            <!-- BLOG POST-->
+            <article class="post">
 
-    <footer class="footer mt-auto py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
 
-                </div>
-                <div class="col-md-3">
-                    <p style="text-align:center;">© 2017 Chris Burdette. All rights reserved</p>
-                </div>
-                <div class="col-md-3">
-                    <ul class="social-list" style="text-align:center;">
-                        <li><a href="https://www.facebook.com/christopher.burdette.50"><i
-                                    class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.instagram.com/iamchrisburdette/"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/chrisburdette/"><i class="fa fa-linkedin"></i></a></li>
+                <div class="post-header">
+                    <h2 class="post-title"><a style="color:#138496" href="blogs/2019/05/how-to-pay-off-debt.html">How I Thanos
+                            Snapped My Debt Of $48,315 At The Age Of 26</a></h2>
+                    <ul class="post-meta">
+                        <li><span>MAY 11, 2019 BY CHRISTOPHER BURDETTE</span></li>
+
                     </ul>
                 </div>
+                <div class="post-content">
+                    <p> Greetings! I have posted a blog about my debt-free journey. This
+                        blog is for anyone who wants to learn the steps it takes to get rid
+                        of debt no matter the circumstances. Hope you enjoy!</p>
+                    <a style="color:#138496" href="blogs/2019/05/how-to-pay-off-debt.html">Read More →</a>
+                </div>
+            </article>
+            <!-- END BLOG POST-->
 
-            </div>
+
         </div>
+        <!-- End Page Content  -->
+    </div>
 
-    </footer>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
     <!-- Scripts-->
     <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/js/plugins.min.js"></script>
     <script src="assets/js/custom.min.js"></script>
-    <!-- Color Switcher (Remove these lines)-->
-    <script src="assets/js/style-switcher.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
