@@ -16,16 +16,14 @@
     <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/images/heart2.png">
 
 
-
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../../../assets/css/style4.css">
 
-    <!-- Web Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Suranna" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+
+
 
     <!-- Icon Fonts-->
     <link href="../../../assets/css/font-awesome.min.css" rel="stylesheet">
@@ -34,33 +32,112 @@
     <!-- Plugins-->
     <link href="../../../assets/css/magnific-popup.css" rel="stylesheet">
     <link href="../../../assets/css/vertical.min.css" rel="stylesheet">
+    <!-- Template core CSS-->
 
+    <style>
+        iframe {
+            border: 0;
+        }
+
+        .content {
+            display: flex;
+
+            flex-direction: column;
+
+            background: #ddd;
+        }
+
+        .infinity {
+
+            position: left;
+
+            height: 80px;
+            width: 80px;
+            transition: all .5s ease-in-out;
+            user-select: none;
+            -moz-user-select: none;
+        }
+
+        .glow-div {
+            position: left;
+            opacity: 100%;
+            height: 80px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        .glow-div:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 170px rgba(0, 194, 45, 0.56);
+            background: radial-gradient(#00c22d8f, #ffffff);
+        }
+
+
+
+        .snap {
+
+
+            position: left;
+            height: 80px;
+            width: 80px;
+            background-image: url('https://www.google.com/logos/fnbx/thanos/thanos_snap.png');
+            background-position: left;
+            background-repeat: no-repeat;
+            animation: snaps 1s steps(47);
+        }
+
+
+        .hide {
+            display: none;
+        }
+
+        @keyframes snaps {
+            from {
+                background-position: left;
+            }
+
+            to {
+                background-position: right;
+            }
+        }
+
+        .dust {
+            position: absolute;
+        }
+
+
+        .disable-hover {
+            pointer-events: none;
+        }
+
+        li {
+            display: inline;
+        }
+    </style>
 
 </head>
 
 <body>
-
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Christopher Burdette</h3>
-                <strong>CB</strong>
-            </div>
-
-            <ul class="list-unstyled components">
+    <!-- Bootstrap NavBar -->
+    <nav class="navbar navbar-default center fixed-top" role="navigation">
+        <div class="navbar-inner" style=" margin:auto;">
+            <ul class="nav navbar-nav" style="display: inline;">
                 <li>
                     <a href="../../../index.html">
                         <i class="fa fa-home"></i>
-                        Home
+                        Home |
                     </a>
 
                 </li>
-                <li>
+
+                <li class="active">
                     <a href="../../../about/./">
                         <i class="fa fa-briefcase"></i>
-                        About
+                        About |
                     </a>
+                </li>
+
+                <li>
                     <a
                         href="https://docs.google.com/document/d/1BUPqjQkpaXzQAWXZKGiDExSNSEYp9Wc5RhRFOrDoaeg/edit?usp=sharing">
                         <i class="fa fa-copy"></i>
@@ -69,361 +146,291 @@
 
                 </li>
 
-                <li>
-                    <a href="../../../contact/./">
-                        <i class="fa fa-paper-plane"></i>
-                        Contact
-                    </a>
-                </li>
-            </ul>
 
 
-            <ul class="list-inline">
-                <li> <a href="https://www.facebook.com/christopher.burdette.50" target="_blank">Facebook <i
-                            class="fa fa-facebook fa-3x"></i>
-                    </a> </li>
-                <li> <a href="https://github.com/cbgithub" target="_blank">Github <i class="fa fa-github fa-3x"></i>
-                    </a> </li>
-
-
-                <li> <a href="https://www.instagram.com/iamchrisburdette/" target="_blank">Instagram <i
-                            class="fa fa-instagram fa-3x"></i>
-                    </a> </li>
-
-                <li> <a href="https://www.linkedin.com/in/chrisburdette/" target="_blank">LinkedIn <i
-                            class="fa fa-linkedin fa-3x"></i>
-                    </a> </li>
 
             </ul>
-            <p>© 2018. All rights reserved.</p>
+        </div>
+    </nav>
+    <!-- NavBar END -->
 
+    <div class="container" style="margin-top:100px;">
 
+        <div class="row">
+            <div class="col-md-12" style="text-align: center; ">
+                <div class="content" style="background-color:transparent; align-items: center;" id="article">
 
-        </nav>
-        <!-- End Sidebar  -->
-        <!-- Page Content  -->
-        <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span></span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="../../../index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../../about/./">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="https://docs.google.com/document/d/1BUPqjQkpaXzQAWXZKGiDExSNSEYp9Wc5RhRFOrDoaeg/edit?usp=sharing">Resume</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../../contact/./">Contact</a>
-                            </li>
-                        </ul>
+                    <div class='snap hide'>
                     </div>
+                    <img class='infinity' src="https://www.google.com/logos/fnbx/thanos/thanos_idle.png" id="snap"
+                        crossorigin="anonymous" title="Click Me" />
+
+                    <h1 class="post-title">How I Thanos Snapped My Debt Of $48,315 At
+                        The Age Of 26
+                    </h1>
+
+
+                    <span>May 11, 2019 BY CHRISTOPHER BURDETTE</span>
+
                 </div>
-            </nav>
+            </div>
 
-            <!-- About POST-->
-            <div class="container">
-                <div class="content" id="article">
-                    <div class="row">
-                        <div class="col-md-12" style="text-align: center;">
-
-                            <div class='snap hide'>
-                            </div>
-                            <img class='infinity' src="https://www.google.com/logos/fnbx/thanos/thanos_idle.png"
-                                id="snap" title="Click Me" />
-
-                            <h1 class="post-title">How I Thanos Snapped My Debt Of $48,315 At
-                                The Age Of 26
-                            </h1>
-
-
-                            <span>May 11, 2019 BY CHRISTOPHER BURDETTE</span>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
 
 
 
 
-                        </div>
+                <div class="content" style="background-color:transparent;" id="article">
 
 
+                    <p>I get asked all the time, "how did you pay off all that debt?". I
+                        honestly
+                        wish I could respond to that question by telling people
+                        that I snapped my fingers as Thanos did in the <a style="color:#138496"
+                            href="https://en.wikipedia.org/wiki/Avengers:_Infinity_War">Avengers:
+                            Inifinty War</a> movie and poof all my debt went away.
+                        However, I can't because life doesn't work that way... unless
+                        you hit the
+                        lotto.
+                        Reality is, I set a goal and didn't give up.
+                    </p>
+                    <p>My name is Christopher Burdette, and I paid off $48,315 of debt
+                        in 30
+                        months at
+                        the age of 26. This journey was not easy, but it’s possible!!!
+                        Here are three things
+                        that help me
+                        pay off my debt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin: auto;">
+
+            <div class="content" style="background-color:transparent; margin:auto;" id="article">
+                <img src="../../../assets/images/blog/debtFree.jpg"
+                    style="width:100%; margin:auto; max-width: 300px; max-height:300px;" />
+            </div>
+
+        </div>
 
 
+        <div class="row">
+            <div class="col-md-12">
 
+                <div class="content" style="background-color:transparent;" id="article">
+                    <h3>
+                        <b>1. Motivation</b>
 
-
-
-                    </div>
-
-
-
-
+                    </h3>
                     <br>
-                    <br>
 
+                    <p>Motivation is the key factor in paying off debt and not quitting.
+                        My biggest
+                        motivation on why I started this debt-free journey was my
+                        daughter Aubrey.
 
+                    </p>
+                    <p>
+                        In 2017 after
+                        my daughter was born, I had a car and student loan.
+                        I knew that once I paid off all this debt, I would be able to do
+                        two things
+                        for my daughter.
+                        First, I would be able to put money aside for my daughter to go
+                        to college
+                        debt free.
+                        Last and most importantly, I would be able to spend more quality
+                        time with
+                        my daughter.
+                    </p>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="content" id="article">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>I get asked all the time, "how did you pay off all that debt?". I
-                                            honestly
-                                            wish I could respond to that question by telling people
-                                            that I snapped my fingers as Thanos did in the <a
-                                            style="color:#138496" href="https://en.wikipedia.org/wiki/Avengers:_Infinity_War">Avengers:
-                                                Inifinty War</a> movie and poof all my debt went away.
-                                            However, I can't because life doesn't work that way... unless
-                                            you hit the
-                                            lotto.
-                                            Reality is, I set a goal and didn't give up.
-                                        </p>
-                                        <p>My name is Christopher Burdette, and I paid off $48,315 of debt
-                                            in 30
-                                            months at
-                                            the age of 26. This journey was not easy, but it’s possible!!!
-                                            Here are three things
-                                            that help me
-                                            pay off my debt.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-
-                                    <img src="../../../assets/images/blog/debtFree.jpg"
-                                        style="width:100%; margin:auto; max-width: 300px; max-height:300px;" />
-
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3>
-                                            <b>1. Motivation</b>
-
-                                        </h3>
-                                        <br>
-
-                                        <p>Motivation is the key factor in paying off debt and not quitting.
-                                            My biggest
-                                            motivation on why I started this debt-free journey was my
-                                            daughter Aubrey.
-
-                                        </p>
-                                        <p>
-                                            In 2017 after
-                                            my daughter was born, I had a car and student loan.
-                                            I knew that once I paid off all this debt, I would be able to do
-                                            two things
-                                            for my daughter.
-                                            First, I would be able to put money aside for my daughter to go
-                                            to college
-                                            debt free.
-                                            Last and most importantly, I would be able to spend more quality
-                                            time with
-                                            my daughter.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3>
-                                            <b>2. Budgeting</b>
-
-                                        </h3>
-                                        <br>
-
-                                        <p>
-                                            Budgeting is a way to be in complete control of your money.
-                                            Budgeting is your detailed plan.
-                                        </p>
-
-                                        <p>
-                                            When I first started budgeting using the <a
-                                            style="color:#138496" href="https://www.everydollar.com/">EveryDollar</a> app , I
-                                            was horrible
-                                            at it.
-                                            It was not until I used the <a
-                                            style="color:#138496" href="https://en.wikipedia.org/wiki/Zero-based_budgeting">zero-based
-                                                budgeting</a> technique that I got good
-                                            at it.
-                                            Doing this technique, I realized that I had extra income that I
-                                            could throw
-                                            at my debt. In addition to that, I gained control of my money,
-                                            and I haven't
-                                            looked back since.
-
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3>
-                                            <b>3. Scarfice</b>
-
-                                        </h3>
-                                        <br>
-                                        <p>
-                                            Sacrificing is delaying gratification. It is what determines how
-                                            bad you want to achieve a goal. During this debt-free journey,
-                                            I sacrificed a lot, but here are the top two.
-                                        </p>
-
-                                        <p>
-
-
-                                            First, I got a roommate. I'm big on having privacy; however, I
-                                            was willing to give that up to save money. My roommate and I
-                                            together pay around
-                                            $1000.00 a month
-                                            for rent, so separately that's $500.00.
-
-                                        </p>
-
-
-                                        <p>
-
-                                            Last, I stop eating out. I love food, and there wasn't a day I
-                                            didn't think about going to Chick-fil-A and ordering a number
-                                            one. However, I had to remind myself that I could get a lot more
-                                            food at Walmart. This sacrifice was hard, but it created healthy
-                                            habits.
-                                            Currently, I meal prep every week and workout about three times
-                                            a week.
-
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3>
-                                            <b>That's It!</b>
-
-                                        </h3>
-                                        <p><i>This journey was difficult, but because I found my motivation,
-                                                started budgeting and sacrificed, I'm debt-free. </i>
-                                        </p>
-
-                                        <p>
-                                            <i>
-                                                I hope this blog post is insipring to those who want to take
-                                                this journey.
-                                                Let me know if you have any questions!
-                                            </i>
-                                        </p>
-                                    </div>
-
-
-                                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            </div>
-
-                        </div>
+                    <div class="content" style="background-color:transparent;" id="article">
                     </div>
                 </div>
 
 
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="content" style="background-color:transparent;" id="article">
+                    <h3>
+                        <b>2. Budgeting</b>
+
+                    </h3>
+                    <br>
+
+                    <p>
+                        Budgeting is a way to be in complete control of your money.
+                        Budgeting is your detailed plan.
+                    </p>
+
+                    <p>
+                        When I first started budgeting using the <a style="color:#138496"
+                            href="https://www.everydollar.com/">EveryDollar</a> app , I
+                        was horrible
+                        at it.
+                        It was not until I used the <a style="color:#138496"
+                            href="https://en.wikipedia.org/wiki/Zero-based_budgeting">zero-based
+                            budgeting</a> technique that I got good
+                        at it.
+                        Doing this technique, I realized that I had extra income that I
+                        could throw
+                        at my debt. In addition to that, I gained control of my money,
+                        and I haven't
+                        looked back since.
+
+                    </p>
+
+                    <div class="content" style="background-color:transparent;" id="article">
+                    </div>
+
+                </div>
             </div>
 
 
-            <div class="container">
-                    Share: 
-                   <a
-                            href="https://twitter.com/intent/tweet?text=How I Thanos Snapped My Debt Of $48,315 At Age 26 - https://cbgithub.github.io/blogs/2019/05/how-to-pay-off-debt.html">Twitter |</a>
-                   
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://cbgithub.github.io/blogs/2019/05/how-to-pay-off-debt.html"
-                            target="_blank">
-                            Facebook |
-                        </a>
-                    <a href="mailto:?subject=How I Thanos Snapped My Debt Of $48,315 At Age 26 &amp;body=Check out this blog https://cbgithub.github.io/blogs/2019/05/how-to-pay-off-debt.html"
-                            title="Share by Email">Email</a>
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="content" style="background-color:transparent;" id="article">
+                    <h3>
+                        <b>3. Scarfice</b>
+
+                    </h3>
+                    <br>
+                    <p>
+                        Sacrificing is delaying gratification. It is what determines how
+                        bad you want to achieve a goal. During this debt-free journey,
+                        I sacrificed a lot, but here are the top two.
+                    </p>
+
+                    <p>
+
+
+                        First, I got a roommate. I'm big on having privacy; however, I
+                        was willing to give that up to save money. My roommate and I
+                        together pay around
+                        $1000.00 a month
+                        for rent, so separately that's $500.00.
+
+                    </p>
+
+
+                    <p>
+
+                        Last, I stop eating out. I love food, and there wasn't a day I
+                        didn't think about going to Chick-fil-A and ordering a number
+                        one. However, I had to remind myself that I could get a lot more
+                        food at Walmart. This sacrifice was hard, but it created healthy
+                        habits.
+                        Currently, I meal prep every week and workout about three times
+                        a week.
+
+                    </p>
+
+                    <div class="content" style="background-color:transparent;" id="article">
+                    </div>
+                </div>
+
+                <br>
             </div>
-
-            <br>
-            <br>
-
-            
+        </div>
 
 
-            <div class="container">
-                <!--Comment Section-->
+        <div class="row">
+            <div class="col-md-12">
 
-                <div id="disqus_thread"></div>
-                <script>
+                <div class="content" style="background-color:transparent;" id="article">
+                    <h3>
+                        <b>That's It!</b>
 
-                    /**
-                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    </h3>
+                    <p><i>This journey was difficult, but because I found my motivation,
+                            started budgeting and sacrificed, I'm debt-free. </i>
+                    </p>
 
-                    var disqus_config = function () {
-                        this.page.url = 'https://cbgithub.github.io/blogs/2019/05/how-to-pay-off-debt.html';
-                        this.page.identifier = '/blogs/2019/05/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                    };
+                    <p>
+                        <i>
+                            I hope this blog post is insipring to those who want to take
+                            this journey.
+                            Let me know if you have any questions!
+                        </i>
+                    </p>
 
-                    (function () { // DON'T EDIT BELOW THIS LINE
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://how-i-thanos-snap-my-debt.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
-                        powered by
-                        Disqus.</a></noscript>
+                    <div class="content" style="background-color:transparent;" id="article">
+                    </div>
+                </div>
 
 
 
 
-                <!--End Of Comment Section-->
+
+
             </div>
-
-
         </div>
 
 
     </div>
 
+    <br>
+    <br>
 
-    <!-- END About POST-->
 
 
+    <div class="container">
+        <!--Comment Section-->
+
+        <div id="disqus_thread"></div>
+        <script>
+
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+            var disqus_config = function () {
+                this.page.url = 'https://cbgithub.github.io/blogs/2019/05/how-to-pay-off-debt.html';
+                this.page.identifier = '/blogs/2019/05/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://how-i-thanos-snap-my-debt.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                powered by
+                Disqus.</a></noscript>
+
+
+
+
+        <!--End Of Comment Section-->
     </div>
-    <!-- End Page Content  -->
-    </div>
+
+
+
+
+
+
+
+
+
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -435,27 +442,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-    <!-- Scripts-->
-    <script src="../../../assets/js/jquery-2.2.4.min.js"></script>
-    <script src="../../../assets/js/chance.js"></script>
-    <script src="../../../assets/js/html2canvas.min.js"></script>
-    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
-
-
-    <script src="../../../assets/js/plugins.min.js"></script>
-    <script src="../../../assets/js/custom.min.js"></script>
-    <script src="../../../assets/js/jquery-ui.min.js"></script>
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
-
     <!-- Scripts-->
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
@@ -500,10 +486,13 @@
 
 
 
-            html2canvas($("#article")[0]).then(canvas => {
+            html2canvas($(".content")[0]).then(canvas => {
                 //capture all div data as image
+
                 ctx = canvas.getContext("2d");
+
                 var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
                 var pixelArr = imageData.data;
                 createBlankImageData(imageData);
                 //put pixel info to imageDataArray (Weighted Distributed)
@@ -523,7 +512,7 @@
                     $("body").append(c);
                 }
                 //clear all children except the canvas
-                $("#article").children().not(".dust").fadeOut(3500);
+                $(".content").children().not(".dust").fadeOut(3500);
                 //apply animation
                 $(".dust").each(function (index) {
                     animateBlur($(this), 0.8, 800);
@@ -593,6 +582,19 @@
         }
 
     </script>
+
+    <!-- Scripts-->
+    <script src="../../../assets/js/jquery-2.2.4.min.js"></script>
+    <script src="../../../assets/js/chance.js"></script>
+    <script src="../../../assets/js/html2canvas.min.js"></script>
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <script src="../../../assets/js/plugins.min.js"></script>
+    <script src="../../../assets/js/custom.min.js"></script>
+    <script src="../../../assets/js/jquery-ui.min.js"></script>
+
+
 </body>
 
 </html>
