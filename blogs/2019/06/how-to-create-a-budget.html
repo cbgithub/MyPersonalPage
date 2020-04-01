@@ -358,14 +358,19 @@
 
         <div id="disqus_thread"></div>
         <script>
+                     function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
 
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
             var disqus_config = function () {
-                this.page.url = 'https://cbgithub.github.io/blogs/2019/06/how-to-create-a-budget.html';
-                this.page.identifier = '/blogs/2019/06/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+               this.page.url = window.location.href;
+                this.page.identifier = uuidv4(); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
             (function () { // DON'T EDIT BELOW THIS LINE
