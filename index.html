@@ -22,9 +22,13 @@
     <link rel="apple-touch-icon" sizes="72x72" href="assets/images/logoTransparency.png">
     <link rel="apple-touch-icon" sizes="114x114" href="assets/images/logoTransparency.png">
 
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!--CDN scripts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="assets/css/style4.css">
 
@@ -38,6 +42,17 @@
 
     <!--style for navbar-->
     <style>
+        .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:white;
+   color: black;
+   text-align: center;
+
+   font-size: x-small;
+}
         li {
             display: inline;
         }
@@ -46,22 +61,45 @@
 </head>
 
 <body>
-    <!-- Bootstrap NavBar -->
-    <nav class="navbar navbar-default center fixed-top" role="navigation">
-        <div class="navbar-inner" style=" margin:auto;">
-            <ul class="nav navbar-nav" style="display: inline;">
-                <img style="width:50px; height:50px;" src="assets/images/logoTransparency.png"/>
-              <h>The Budget Developer</h>
+<!-- NavBar Start -->
+<nav class="navbar navbar-light fixed-top navbar-expand-md">
+   <div class="container">
+    <a class="navbar-brand" href="./index.html">  <img style="width:50px; height:50px;" src="assets/images/logoTransparency.png"/>The Budget Developer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
 
-            
+<div class="collapse navbar-collapse" id="navbar1">
+  <ul class="navbar-nav mr-auto" >
+    <li class="nav-item">
+      <a class="nav-link" href="./ReportCard.html">Report Card</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Products</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto list-inline" >
+    <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
+        class="fa fa-facebook fa-1x"></i>
+</a></li>
+    <li class="list-inline-item">  <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
+        class="fa fa-instagram fa-1x"></i>
+</a></li>
+<li class="list-inline-item"> <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
+    class="fa fa-youtube fa-1x"></i>
+</a></li>
+  </ul>
+</div>
+</nav>
+ <!-- NavBar END -->
 
+           
+    
 
-            </ul>
-        </div>
-    </nav>
-    <!-- NavBar END -->
+ 
+
 
     <!--Content Begin-->
     <div class="container" style="margin-top:100px;">
@@ -71,7 +109,7 @@
             <img src="assets/images/bio.jpg" style="border-radius: 50%; margin:auto;" width="100px;" height="100px;"
                 alt="...">
             <div class="card-body">
-                <p><a href="">thebudgetdev@gmail.com</a></p>
+                <p><a href="">Contact me : thebudgetdev@gmail.com</a></p>
                 <h2 class="card-title">Hello, I am Chris Burdette
                 </h2>
 
@@ -82,25 +120,8 @@
                     the age of 26. This journey was not easy, but it’s possible!!!</p>
             
               <p class="card-text">Follow me below on my next journey to financial freedom and early retirement!</p>
-                <br>
-                <br>
-                <button class="btn-light">
-                    <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
-                            class="fa fa-facebook fa-3x"></i>
-                    </a>
-                </button>
-                <button class="btn-light">
-                    <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
-                            class="fa fa-instagram fa-3x"></i>
-                    </a>
-                </button>
-                <button class="btn-light">
-                    <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
-                            class="fa fa-youtube fa-3x"></i>
-                    </a>
-                </button>
+          
                
-
 
 
 
@@ -108,18 +129,33 @@
             </div>
 
 
-
+            <div class="card-footer bg-transparent " style="margin-top: 10px; text-align:center;">
+                <ul class="list-inline">
+                    <li class="list-inline-item">Copyright ©️ The Budget Developer</li>
+                    <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
+                        class="fa fa-facebook fa-1x"></i>
+                </a></li>
+                    <li class="list-inline-item">  <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
+                        class="fa fa-instagram fa-1x"></i>
+                </a></li>
+                <li class="list-inline-item"> <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
+                    class="fa fa-youtube fa-1x"></i>
+            </a></li>
+                  </ul>
+            
+            </div>
+        
         </div>
 
 
-
+       
     </div>
 
     <!--Content End-->
 
 
 
-
+  
 
 
 

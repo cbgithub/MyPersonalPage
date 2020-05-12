@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The financial freedom journey of the budget developer.">
+    <meta name="author" content="Christopher Burdette">
+    <meta property="fb:app_id"          content="550350708956700" /> 
+    <meta property="og:type"            content="website" /> 
+    <meta property="og:url"             content="https://thebudgetdeveloper.com" /> 
+    <meta property="og:title"           content="Chris Burdette | Budget Report Card" /> 
+    <meta property="og:image"           content="https://thebudgetdeveloper.com/assets/images/logoTransparency.png" /> 
+    <meta property="og:description"    content="The financial freedom journey of the budget developer." />
+    <title>Budget Report Card - The Budget Developer</title>
+
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="assets/images/logoTransparency.png">
+    <link rel="apple-touch-icon" href="assets/images/logoTransparency.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/logoTransparency.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/logoTransparency.png">
+
+    <!--CDN scripts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style4.css">
+
+   
+
+    <!-- Icon Fonts-->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-social.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+
+
+      <!--style for navbar-->
+      <style>
+        .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  text-align: center;
+   background-color:white;
+   color: black;
+  
+   font-size: x-small;
+}
+        li {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NavBar Start -->
+<nav class="navbar navbar-light fixed-top navbar-expand-md">
+    <div class="container">
+     <a class="navbar-brand" href="./index.html">  <img style="width:50px; height:50px;" src="assets/images/logoTransparency.png"/>The Budget Developer</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+ 
+ 
+ 
+ <div class="collapse navbar-collapse" id="navbar1">
+   <ul class="navbar-nav mr-auto" >
+     <li class="nav-item active">
+       <a class="nav-link" href="./ReportCard.html">Report Card</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="#">Products</a>
+     </li>
+   </ul>
+   <ul class="navbar-nav ml-auto list-inline" >
+    <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
+        class="fa fa-facebook fa-1x"></i>
+</a></li>
+    <li class="list-inline-item">  <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
+        class="fa fa-instagram fa-1x"></i>
+</a></li>
+<li class="list-inline-item"> <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
+    class="fa fa-youtube fa-1x"></i>
+</a></li>
+  </ul>
+ </div>
+ </nav>
+  <!-- NavBar END -->
+
+    <div class="container" style="margin-top: 150px;">
+        <div class="card" style="padding: 10px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="CategoryName">Budget Category Name</label>
+                            <input type="text" class="form-control" id="CategoryName" placeholder="Enter Category Name...">
+                          </div>
+                      
+                        <div class="form-group">
+                            <label for="Planned">Planned</label>
+                            $<input type="number" min="0.01" step="0.01" class="form-control" id="Planned">
+                          </div>
+                          <div class="form-group">
+                            <label for="Spent">Actual Saved/Spent</label>
+                            $<input type="number" min="0.01" step="0.01" class="form-control" id="Spent">
+                          </div>
+                         
+                      </form>
+                    
+                      <button onclick="getGrade()" class="btn btn-primary">Calculate</button>
+                </div>
+    
+              
+                <div class="col-md-6" style="margin-top: 10px;">
+                    <div class="card">
+                        <div class="card-header" style="color: black; text-align: center;">
+                          Budget Report Card
+                          <br>
+                          <a href="" style="color:blue; font-size: small;">Click here and get your printable budget report card!</a>
+                        </div>
+                        <div class="card-body" id="mycontent" style="text-align: center;">
+                            <h1 style="color:red;" id="Grade">
+                            </h1>
+                            <p style="color:black;" id="name">
+    
+                            </p>
+                            <p id="Message">
+                            </p>
+                        </div> 
+                        <div class="card-footer" style="text-align: center;">  
+                          
+                        </div>
+                    </div>   
+                </div>
+             
+            </div>
+            <div class="card-footer bg-transparent " style="margin-top: 10px; text-align:center;">
+                <ul class="list-inline">
+                    <li class="list-inline-item">Copyright ©️ The Budget Developer</li>
+                    <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
+                        class="fa fa-facebook fa-1x"></i>
+                </a></li>
+                    <li class="list-inline-item">  <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
+                        class="fa fa-instagram fa-1x"></i>
+                </a></li>
+                <li class="list-inline-item"> <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
+                    class="fa fa-youtube fa-1x"></i>
+            </a></li>
+                  </ul>
+            
+            </div>
+        </div>
+       
+      
+        
+          
+          
+
+  
+      
+    </div>
+
+  
+</body>
+
+<script src="assets/js/message.js"></script>
+<script type="text/javascript">
+
+
+function getGrade(){
+    var planned = document.getElementById("Planned").value;
+    var spent = document.getElementById("Spent").value; 
+    var name = document.getElementById("CategoryName").value;
+    document.getElementById("Grade").innerHTML = "";
+    document.getElementById("Message").innerHTML = "";
+    document.getElementById("name").innerHTML = "";
+    var remaining = planned - spent;
+        if(planned == 0 && spent == 0){
+
+        }
+        else if(remaining == 0){
+            var number = Math.floor(Math.random() * AGrade.length);
+            var begHtml = 'A';
+            document.getElementById("Grade").append(begHtml);
+            document.getElementById("Message").append(AGrade[number]);
+            document.getElementById("name").append(name);
+        }
+        else if(remaining < 0 ){
+            var begHtml = 'F';
+            var number = Math.floor(Math.random() * FGrade.length);
+            document.getElementById("Grade").append(begHtml);
+            document.getElementById("Message").append(FGrade[number]);
+            document.getElementById("name").append(name);
+        }
+        else{
+            var begHtml = 'C';
+            var number = Math.floor(Math.random() * CGrade.length);
+            document.getElementById("Grade").append(begHtml);
+            document.getElementById("Message").append(CGrade[number]);
+            document.getElementById("name").append(name);
+           
+        }
+}
+
+
+</script>
+</html>
