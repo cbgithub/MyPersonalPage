@@ -15,6 +15,9 @@ var CGrade = [
     'You need to pay more attention to your budget. Try decreasing your monthly budget planned.',
     'You are making progress, but there is work to be done. Stick to the amount you have planned.',
     'Needs improvement. Try re-adjusting your budget in this category.',
+    'Great job, but you can do better! You got this!',
+    'The hard work is paying off! Just adjust your budget for next month!',
+    'What great progress you have made! Next focus on improving your amount planned in this category!'
 
  
 ]
