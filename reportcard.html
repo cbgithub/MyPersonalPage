@@ -373,13 +373,13 @@
         }
         else if (remaining == 0) {
             var number = Math.floor(Math.random() * AGrade.length);
-            var begHtml = 'Budget Category Name: A';
+            var begHtml = 'A';
             document.getElementById("Grade").append(begHtml);
             document.getElementById("Message").append(AGrade[number]);
             document.getElementById("name").append(name);
         }
         else if (remaining < 0) {
-            var begHtml = 'Budget Category Name: F';
+            var begHtml = 'F';
             var number = Math.floor(Math.random() * FGrade.length);
             document.getElementById("Grade").append(begHtml);
             document.getElementById("Message").append(FGrade[number]);
@@ -388,7 +388,7 @@
             $("#Schedule").html(schedulehtmlLink);
         }
         else {
-            var begHtml = 'Budget Category Name: C';
+            var begHtml = 'C';
             var number = Math.floor(Math.random() * CGrade.length);
             document.getElementById("Grade").append(begHtml);
             document.getElementById("Message").append(CGrade[number]);
