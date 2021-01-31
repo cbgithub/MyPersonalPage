@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="The financial freedom journey of the budget developer.">
     <meta name="author" content="Christopher Burdette">
-    <meta property="fb:app_id"          content="550350708956700" /> 
-    <meta property="og:type"            content="website" /> 
-    <meta property="og:url"             content="https://thebudgetdeveloper.com" /> 
-    <meta property="og:title"           content="Chris Burdette | Budget Report Card" /> 
-    <meta property="og:image"           content="https://thebudgetdeveloper.com/assets/images/logoTransparency.png" /> 
-    <meta property="og:description"    content="The financial freedom journey of the budget developer." />
+    <meta property="fb:app_id" content="550350708956700" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thebudgetdeveloper.com" />
+    <meta property="og:title" content="Chris Burdette | Budget Report Card" />
+    <meta property="og:image" content="https://thebudgetdeveloper.com/assets/images/logoTransparency.png" />
+    <meta property="og:description" content="The financial freedom journey of the budget developer." />
     <title>Budget Report Card - The Budget Developer</title>
 
 
@@ -32,7 +32,7 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="assets/css/style4.css">
 
-   
+
 
     <!-- Icon Fonts-->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -40,172 +40,366 @@
     <link href="assets/css/themify-icons.css" rel="stylesheet">
 
 
-      <!--style for navbar-->
-      <style>
-   
+    <!--style for navbar-->
+    <style>
         li {
             display: inline;
         }
+
+        #regForm {
+            background-color: #ffffff;
+            margin: 100px auto;
+            font-family: Raleway;
+            padding: 40px;
+            width: 70%;
+            min-width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            font-size: 17px;
+            font-family: Raleway;
+            border: 1px solid #aaaaaa;
+        }
+
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+        }
+
+        /* Hide all steps by default: */
+        .tab {
+            display: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 17px;
+            font-family: Raleway;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #prevBtn {
+            background-color: #bbbbbb;
+        }
+
+        /* Make circles that indicate the steps of the form: */
+        .step {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.5;
+        }
+
+        .step.active {
+            opacity: 1;
+        }
+
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+            background-color: #4CAF50;
+        }
+    </style>
+
+
     </style>
 </head>
 
 <body>
     <!-- NavBar Start -->
-<nav class="navbar navbar-light fixed-top navbar-expand-md">
-    <div class="container">
-     <a class="navbar-brand" href="./index.html">  <img style="width:50px; height:50px;" src="assets/images/logoTransparency.png"/>The Budget Developer</a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-       <span class="navbar-toggler-icon"></span>
-     </button>
- 
- 
- 
- <div class="collapse navbar-collapse" id="navbar1">
-   <ul class="navbar-nav mr-auto" >
-    <li class="nav-item">
-        <a class="nav-link" href="./index.html">Home</a>
-      </li>
-     <li class="nav-item active">
-       <a class="nav-link" href="./reportcard.html">Budget Report</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" href="https://www.etsy.com/listing/803539313/budget-report-card-instant-download?ref=shop_home_active_1">Products</a>
-     </li>
-   </ul>
-   <ul class="navbar-nav ml-auto list-inline" >
-    <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
-        class="fa fa-facebook fa-1x"></i>
-</a></li>
-    <li class="list-inline-item">  <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
-        class="fa fa-instagram fa-1x"></i>
-</a></li>
-<li class="list-inline-item"> <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
-    class="fa fa-youtube fa-1x"></i>
-</a></li>
-  </ul>
- </div>
- </nav>
-  <!-- NavBar END -->
+    <nav class="navbar navbar-light fixed-top navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"> <img style="width:50px; height:50px;"
+                    src="assets/images/logoTransparency.png" />The Budget Developer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutme.html">About me</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./reportcard.html">Budget Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://www.etsy.com/listing/803539313/budget-report-card-instant-download?ref=shop_home_active_1">Products</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto list-inline">
+                    <li class="list-inline-item"> <a href="https://www.facebook.com/thebudgetdeveloper/"
+                            target="_blank"><i class="fa fa-facebook fa-1x"></i>
+                        </a></li>
+                    <li class="list-inline-item"> <a href="https://www.instagram.com/thebudgetdeveloper/"
+                            target="_blank"><i class="fa fa-instagram fa-1x"></i>
+                        </a></li>
+                    <li class="list-inline-item"> <a
+                            href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
+                                class="fa fa-youtube fa-1x"></i>
+                        </a></li>
+                </ul>
+            </div>
+    </nav>
+    <!-- NavBar END -->
 
     <div class="container" style="margin-top: 100px;">
         <div class="card" style="padding: 10px;">
             <div class="card-header bg-transparent" style="margin-bottom: 10px;  text-align:center;">
-                Calculate your Budget Grade
-              </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="CategoryName">Budget Category Name</label>
-                            <input type="text" class="form-control" id="CategoryName" placeholder="Enter Category Name...">
-                          </div>
-                      
-                        <div class="form-group">
-                            <label for="Planned">Planned</label>
-                            $<input type="number" min="0.01" step="0.01" class="form-control" id="Planned">
-                          </div>
-                          <div class="form-group">
-                            <label for="Spent">Actual Saved/Spent</label>
-                            $<input type="number" min="0.01" step="0.01" class="form-control" id="Spent">
-                          </div>
-                         
-                      </form>
-                    
-                      <button onclick="getGrade()" class="btn btn-primary">Calculate</button>
-                </div>
-    
-              
-                <div class="col-md-6" style="margin-top: 10px;">
-                    <div class="card">
-                        <div class="card-header" style="color: black; text-align: center;">
-                          Budget Report
-                          <br>
-                          <a href="https://www.etsy.com/listing/803539313/budget-report-card-instant-download?ref=shop_home_active_1" style="color:blue; font-size: small;">Buy your printable budget report card here!</a>
-                        </div>
-                        <div class="card-body" id="mycontent" style="text-align: center;">
-                            <h1 style="color:red;" id="Grade">
-                            </h1>
-                            <p style="color:black;" id="name">
-    
-                            </p>
-                            <p id="Message">
-                            </p>
-                        </div> 
-                        <div class="card-footer" style="text-align: center;">  
-                          
-                        </div>
-                    </div>   
-                </div>
-             
+                <h3 style="color:blue;">Calculate your Budget Grade</h3>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- One "tab" for each step in the form: -->
+                    <div class="tab">
+                        <form>
+                            <div class="form-group">
+                                <h4>1. Enter Budget Category Name:</h4>
+                                
+                                <input type="text" class="form-control" id="CategoryName"
+                                    placeholder="Enter Category Name...">
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="tab">
+                        <form>
+                            <div class="form-group">
+                                <h4>2. Enter Expense Amount Planned:</h4>
+                                <i style="color:red;">Ex. For the month of February, If I planned to spend $200, I would enter $200 in the box below.</i>
+                                
+                                <input type="number" min="0.01" step="0.01" class="form-control" id="Planned">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="tab">
+                        <form>
+                            <div class="form-group">
+                                <h4>3. Enter Amount Actually Spent/Saved:</h4>
+                                <i style="color:red;">Ex. For the month of February, If I planned to spend $200, but actually spent $300 I would enter $300 in the box below.</i>
+                                
+                                <input type="number" min="0.01" step="0.01" class="form-control" id="Spent">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="tab">
+                        <div class="container">
+                            <div class="row" style="text-align:center;">
+                                <div class="col-md-12">
+                                    <h1 style="color:red; text-align:center;" id="Grade">
+                                    </h1>
+                                    <p style="color:black; text-align:center;" id="name">
+            
+                                    </p>
+                                    <p id="Message" style="text-align:center;">
+                                    </p>
+                                    <p id="Schedule" style="text-align:center; color:red;"></p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        
+                      
+                    </div>
+                  
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="card-footer bg-transparent " style="margin-top: 10px; text-align:center;">
                 <ul class="list-inline">
                     <li class="list-inline-item">Copyright ©️ The Budget Developer</li>
-                    <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
-                        class="fa fa-facebook fa-1x"></i>
-                </a></li>
-                    <li class="list-inline-item">  <a href="https://www.instagram.com/thebudgetdeveloper/" target="_blank"><i
-                        class="fa fa-instagram fa-1x"></i>
-                </a></li>
-                <li class="list-inline-item"> <a href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
-                    class="fa fa-youtube fa-1x"></i>
-            </a></li>
-                  </ul>
-            
+                    <li class="list-inline-item"> <a href="https://www.facebook.com/thebudgetdeveloper/"
+                            target="_blank"><i class="fa fa-facebook fa-1x"></i>
+                        </a></li>
+                    <li class="list-inline-item"> <a href="https://www.instagram.com/thebudgetdeveloper/"
+                            target="_blank"><i class="fa fa-instagram fa-1x"></i>
+                        </a></li>
+                    <li class="list-inline-item"> <a
+                            href="https://m.youtube.com/channel/UCA7zxrNqB1m98OaSeFGFKHA/featured" target="_blank"><i
+                                class="fa fa-youtube fa-1x"></i>
+                        </a></li>
+                </ul>
+
             </div>
         </div>
-       
-      
-        
-          
-          
 
-  
-      
+
+
+
+
+
+
+
     </div>
 
-  
+
 </body>
 
 <script src="assets/js/message.js"></script>
 <script type="text/javascript">
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
 
+    function showTab(n) {
+        // This function will display the specified tab of the form...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        //... and fix the Previous/Next buttons:
+        if(n == (x.length - 1)){
+            document.getElementById("nextBtn").style.display = "none";
+        }
+        else{
+            document.getElementById("nextBtn").style.display = "inline";
+        }
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 2)) {
+            document.getElementById("nextBtn").innerHTML = "Calculate Grade";
+        } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(n)
+    }
 
-function getGrade(){
-    var planned = document.getElementById("Planned").value;
-    var spent = document.getElementById("Spent").value; 
-    var name = document.getElementById("CategoryName").value;
-    document.getElementById("Grade").innerHTML = "";
-    document.getElementById("Message").innerHTML = "";
-    document.getElementById("name").innerHTML = "";
-    var remaining = planned - spent;
-        if(planned == 0 && spent == 0){
+    function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form...
+        if (currentTab >= x.length-1) {
+            // ... the form gets submitted:
+            getGrade();
+            showTab(currentTab);
+            return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+    }
+
+    function validateForm() {
+        // This function deals with validation of the form fields
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+            if (y[i].value.length == 0) {
+                // add an "invalid" class to the field:
+                y[i].className += " invalid";
+                // and set the current valid status to false
+                valid = false;
+            }
+        }
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid; // return the valid status
+    }
+
+    function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class on the current step:
+        x[n].className += " active";
+    }
+
+    function getGrade() {
+        var planned = document.getElementById("Planned").value;
+        var spent = document.getElementById("Spent").value;
+        var name = document.getElementById("CategoryName").value;
+        var schedule = document.getElementById("Schedule").value;
+        var schedulehtmlLink = ""
+        document.getElementById("Grade").innerHTML = "";
+        document.getElementById("Schedule").innerHTML = "";
+        document.getElementById("Message").innerHTML = "";
+        document.getElementById("name").innerHTML = "";
+        var remaining = planned - spent;
+        if (planned == 0 && spent == 0) {
 
         }
-        else if(remaining == 0){
+        else if (remaining == 0) {
             var number = Math.floor(Math.random() * AGrade.length);
-            var begHtml = 'A';
+            var begHtml = 'Budget Category Name: A';
             document.getElementById("Grade").append(begHtml);
             document.getElementById("Message").append(AGrade[number]);
             document.getElementById("name").append(name);
         }
-        else if(remaining < 0 ){
-            var begHtml = 'F';
+        else if (remaining < 0) {
+            var begHtml = 'Budget Category Name: F';
             var number = Math.floor(Math.random() * FGrade.length);
             document.getElementById("Grade").append(begHtml);
             document.getElementById("Message").append(FGrade[number]);
             document.getElementById("name").append(name);
+            schedulehtmlLink = '<a href="">(Coming Soon) Click here to make an appointement</a>'
+            $("#Schedule").html(schedulehtmlLink);
         }
-        else{
-            var begHtml = 'C';
+        else {
+            var begHtml = 'Budget Category Name: C';
             var number = Math.floor(Math.random() * CGrade.length);
             document.getElementById("Grade").append(begHtml);
             document.getElementById("Message").append(CGrade[number]);
             document.getElementById("name").append(name);
-           
+            schedulehtmlLink = '<a href="">(Coming Soon) Click here to make an appointement</a>'
+            $("#Schedule").html(schedulehtmlLink);
+
         }
-}
+    }
 
 
 </script>
+
 </html>
