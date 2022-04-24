@@ -23,7 +23,9 @@ a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
-
+.shopify-buy__layout-horizontal .shopify-buy__product__variant-img {
+    max-width: 60%;
+}
 .navbar {
     padding: 15px 10px;
     background: #fff;
