@@ -28,7 +28,7 @@ function setTheme() {
 
     if (localStorage.getItem("dark") === "true") {
       document.body.setAttribute("theme", "dark");
-      document.getElementById("logo").src = "assets/images/logoWhiteTransparency.png";
+      document.getElementById("logo").src = "assets/images/logoWhiteTransparency.PNG";
       if (document.getElementById("card-title") != undefined) {
       
           document.getElementById("card-title").style.color = "lightblue";
