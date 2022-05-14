@@ -55,7 +55,7 @@
 <!-- NavBar Start -->
 <nav class="navbar navbar-light fixed-top navbar-expand-md">
    <div class="container">
-    <a class="navbar-brand" href="./index.html">  <img style="width:50px; height:50px;" src="assets/images/logoTransparency.png"/>The Budget Developer</a>
+    <a class="navbar-brand" href="./index.html">  <img id="logo" style="width:50px; height:50px;" src="assets/images/logoTransparency.png"/>The Budget Developer</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -76,13 +76,14 @@
       <a class="nav-link" href="./reportcard.html">Budget Report</a>
     </li>
     <li class="nav-item">
-      <!--<a class="nav-link" href="https://www.etsy.com/shop/thebudgetdeveloper?ref=shop_sugg">Products</a>-->
+      <a class="nav-link" href="https://www.etsy.com/listing/1232185591/a6-budget-binder-zipper-cash-envelopes?ref=listings_manager_grid">Budget Binder</a>
                  <!-- <a class="nav-link" href="./products.html">Products</a> --> 
     </li>
   </ul>
     
 
   <ul class="navbar-nav ml-auto list-inline" >
+    <li class="list-inline-item"><i class="fa-solid fa-moon fa-2x" onclick="toggleTheme(true)"></i></li>
     <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
         class="fa-brands fa-facebook fa-1x" style="color:blue;"></i>
 </a></li>
@@ -106,7 +107,7 @@
     <!--Content Begin-->
     <div class="container" style="margin-top:100px;">
    
-        <div class="card" style="text-align:center; padding: 10px; border-color:black;">
+        <div class="card" style="text-align:center; padding: 10px;">
          
           
                 <div class="row">
@@ -114,7 +115,7 @@
                         <img src="assets/images/bike.jpg" alt="Nature"  style="border-radius: 8px;" width="60%; height:auto;">
                     </div>
                     <div class="col-md-6" style="padding-top:20px; text-align: center;">
-                        <h2 class="card-title" style="color:blue;">Hello, I am Chris Burdette
+                        <h2 class="card-title" id="card-title"  style="color:blue;">Hello, I am Chris Burdette
                         </h2>
                         <br>
                         <p class="card-text">My name is Christopher Burdette, and I paid off $48,315 of debt
@@ -130,7 +131,7 @@
                 </div>
             
 
-            <div class="card-footer bg-transparent " style="margin-top: 10px; text-align:center;">
+            <div class="card-footer bg-transparent " style="margin-top: 10px; text-align:center; border-color:inherit;">
                 <ul class="list-inline">
                     <li class="list-inline-item">Copyright ©️ The Budget Developer</li>
                     <li class="list-inline-item">   <a href="https://www.facebook.com/thebudgetdeveloper/" target="_blank"><i
@@ -161,5 +162,12 @@
 
 
 </body>
+<script src="assets/js/darkmode.js"></script>
+<script>
+window.onload = function() {
 
+setTheme();
+
+};
+</script>
 </html>

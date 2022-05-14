@@ -3,10 +3,24 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
+
+
+body[theme=light] {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-}
+    background: #fafafa !important;
+    color: black !important;
+    border-color:black;
+  }
+  
+body[theme=dark] {
+    font-family: 'Poppins', sans-serif;
+    background-color: black !important;
+    color: white !important;
+    border-color: white;
+  }
+
+  
+  
 
 p {
     font-family: 'Poppins', sans-serif;
@@ -26,19 +40,79 @@ a:focus {
 .shopify-buy__layout-horizontal .shopify-buy__product__variant-img {
     max-width: 60%;
 }
+
+.card-body{
+    background-color: inherit;
+    color:inherit; 
+}
+
+.card{
+    background-color: inherit;
+    color:inherit; 
+    border-color: inherit;
+}
+.collapse navbar-collapse{
+    background-color: inherit;
+    color:inherit;
+}
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    background-color: inherit;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-toggler {
+    color: rgba(0,0,0,.5);
+    background-color: lightgray;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar-light .navbar-brand{
+    background-color: inherit;
+    color: inherit;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link,
+.navbar-light .navbar-brand:hover {
+    color: green;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
+{
+    background-color: inherit;
+    color: inherit;
+}
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
     border: none;
+}
+
+.logo{
+    background-image: url("../images/logoTransparency.png");
+   
+    width: 80%;
+    height: 50px;
+    position: relative;
+    background-repeat: no-repeat;
+    color:blue;
+   
+}
+
+.logo.light{
+    background-image: url("../images/logoWhiteTransparency.PNG");
+    width:50px; 
+    height:50px; 
+    color:blue;
+ 
 }
 
 .line {
