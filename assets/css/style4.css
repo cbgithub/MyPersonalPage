@@ -7,7 +7,7 @@
 
 body[theme=light] {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa !important;
+    background: white !important;
     color: black !important;
     border-color:black;
   }
@@ -19,7 +19,16 @@ body[theme=dark] {
     border-color: white;
   }
 
-  
+.left-icon-holder {
+    position:relative;
+}
+.left-icon-holder .fa {
+    position:absolute;
+    line-height: 24px;
+    top:50%;
+    margin-top: -12px; /* Half of line height to keep left middle postion of container */
+    left: 10px;
+}
   
 
 p {
@@ -49,7 +58,7 @@ a:focus {
 .card{
     background-color: inherit;
     color:inherit; 
-    border-color: inherit;
+    border-color: white;
 }
 .collapse navbar-collapse{
     background-color: inherit;
