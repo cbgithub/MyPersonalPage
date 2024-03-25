@@ -581,6 +581,12 @@ const productmodalTitle = document.querySelector("[data-modal-post-title]");
 const productmodalText = document.querySelector("[data-modal-post-text]");
 
 
+  // modal toggle function
+const productsItemsModalFunc = function () {
+
+    productmodalContainer.classList.toggle("active");
+    productoverlay.classList.toggle("active");
+}
 
 
 function setUpProducts() {
@@ -588,12 +594,6 @@ function setUpProducts() {
 
 
 
-  // modal toggle function
-  const productsItemsModalFunc = function () {
-
-    productmodalContainer.classList.toggle("active");
-    productoverlay.classList.toggle("active");
-  }
 
 
 
@@ -640,13 +640,15 @@ for (let i = 0; i < productItems.length; i++) {
 }
 
 
-  // add click event to modal close button
-  productmodalCloseBtn.addEventListener("click", productsItemsModalFunc);
-  productoverlay.addEventListener("click", productsItemsModalFunc);
+
 
 
 }
 
+
+  // add click event to modal close button
+productmodalCloseBtn.addEventListener("click", productsItemsModalFunc);
+productoverlay.addEventListener("click", productsItemsModalFunc);
 
 function waitForElement(selector, callback) {
   const intervalId = setInterval(() => {
