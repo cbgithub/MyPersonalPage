@@ -418,7 +418,7 @@ function getProductData(){
         product_span_dot.setAttribute("class", "dot");
 
         var product_time = document.createElement("time");
-        product_time.setAttribute("datetime", r[8]);
+        product_time.setAttribute("date", r[8]);
         product_time.innerHTML = r[8];
 
         var product_item_title = document.createElement("h3");
