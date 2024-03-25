@@ -1,187 +1,473 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="The financial freedom journey of the budget developer.">
-  <meta name="author" content="Christopher Burdette">
-  <meta property="fb:app_id" content="550350708956700" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thebudgetdeveloper.com" />
-  <meta property="og:title" content="Chris Burdette | The Budget Developer" />
-  <meta property="og:image" content="https://thebudgetdeveloper.com/assets/images/logoTransparency.png" />
-  <meta property="og:description" content="The financial freedom journey of the budget developer." />
-  <title>Home - The Budget Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Budget Developer</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" width="800px" href="./assets/images/TheBudgetInvertedColor2400x1800.jpg" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
 
-  <!-- Favicons-->
-  <link rel="shortcut icon" href="assets/images/logoTransparency.png">
-  <link rel="apple-touch-icon" href="assets/images/logoTransparency.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/logoTransparency.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/logoTransparency.png">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!--CDN scripts-->
 
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <!-- Icon Fonts-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
-    integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<div class="wrap">
-  <div id="profile" class="profile">
+<body>
+
+  <div class="loading-overlay" id="loading">
+   
+      
+
+   
+      <img src="./assets/images/TheBudgetLogoSymbol.png" id="rotatingText"  width="50px" height="50px">
+    
+     
+    </span>
   </div>
-  <div id="sociallinks" class="links">
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box" id="profile-avator-box">
+         
+        </figure>
+
+        <div class="info-content" id="profile-info-content">
+        
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info" id="contact-info-email">
+              <p class="contact-title">Email</p>
 
 
-  </div>
-  <div class="footer"> Budget Developer Co. @ 2023</div>
-</div>
-</body>
+            </div>
 
-<script>
+          </li>
 
-  function getProfileData() {
-    var dataArray = null;
-
-    $.ajax({
-
-      // Our sample url to make request 
-      url:
-        'https://script.google.com/macros/s/AKfycbxWTYNyp4R824SgABa5qTEsx-t6v5tDdNvjAJWxBO-fl3ycghAnyqttWL8XjMf3-FF-/exec',
-
-      // Type of Request
-      type: "GET",
-
-      // Function to call when to
-      // request is ok 
-      success: function (data) {
-        dataArray = data;
-        dataArray.data.forEach(r => {
-
-          var img = document.createElement('img');
-          img.setAttribute("class", "photo");
-          img.setAttribute("width",r[4]);
-          img.setAttribute("height",r[5]);
-          img.setAttribute("text-align", "center");
        
-          img.setAttribute("src", "" + r[3]);
-          var name = document.createElement("span");
-          name.setAttribute("class", "profile_name");
-          name.innerHTML = r[1];
 
-          var slogan = document.createElement("span");
-          slogan.setAttribute("class", "at");
-          slogan.innerHTML = r[2];
+        
 
-          document.getElementById('profile').appendChild(img);
-          document.getElementById('profile').appendChild(name);
-          document.getElementById('profile').appendChild(slogan);
+          <li class="contact-item">
 
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
 
-        })
+            <div class="contact-info" id="contact-info-location">
+              <p class="contact-title" >Location</p>
 
+       
+            </div>
 
+          </li>
 
+        </ul>
 
-      },
+        <div class="separator"></div>
 
-      // Error handling 
-      error: function (error) {
-        console.log(`Error ${error}`);
-      }
-    });
-  }
+        <ul class="social-list" id="social-list-items">
 
+      
 
-  function getProductData() {
-    var dataArray = null;
+        </ul>
 
-    $.ajax({
+      </div>
 
-      // Our sample url to make request 
-      url:
-        'https://script.google.com/macros/s/AKfycbxwxX_RkZFldvKymxOpfCwS9E9W0kCLSAGsSnneg7YQdxSEsCdHAGMXfg2GqNp4nCFU/exec',
-
-      // Type of Request
-      type: "GET",
-
-      // Function to call when to
-      // request is ok 
-      success: function (data) {
-        dataArray = data;
+    </aside>
 
 
 
 
 
+    <!--
+      - #main-content
+    -->
 
+    <div class="main-content">
 
-        dataArray.data.forEach(r => {
+      <!--
+        - #NAVBAR
+      -->
 
-          var card = document.createElement('div');
-          card.setAttribute("id", "item");
-          card.setAttribute("class", "card");
-          var a = document.createElement("a");
-          a.setAttribute("href", r[5]);
+      <nav class="navbar">
 
+        <ul class="navbar-list">
 
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
 
+       
 
-          var icon = document.createElement("i");
-          icon.setAttribute("class", r[3]);
-          icon.innerHTML = " " + r[1];
+        
 
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Latest</button>
+          </li>
 
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
 
+        </ul>
 
-
-
-
-          var h3 = document.createElement("h3");
-
-          var paragraph = document.createElement("p");
-          paragraph.innerHTML = r[2];
-
-          h3.appendChild(icon);
-          card.appendChild(h3);
-          card.appendChild(paragraph);
-
-          a.append(card);
-
-
-          document.getElementById('sociallinks').appendChild(a);
-
-        })
+      </nav>
 
 
 
 
-      },
 
-      // Error handling 
-      error: function (error) {
-        console.log(`Error ${error}`);
-      }
-    });
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text" id="about-text-id">
+         
+        </section>
 
 
-  }
+        <!--
+          - service
+        -->
 
-  window.onload = function () {
+        <section class="service">
 
-    getProfileData();
-    getProductData();
+          <h3 class="h3 service-title">What i'm doing</h3>
 
-  };
+          <ul class="service-list" id="service-list-id">
 
-</script>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar" id="testimonials-list-id">
+
+         
+
+          
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="generic-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <span  data-modal-img-style>
+                  <i class="" alt=""  data-modal-img-icon></i>
+                  <img alt="" data-modal-img-src>
+                </span>
+           
+              </figure>
+
+              <span style="font-size: 1em; color: white"  >
+                <i class="fa-solid fa-quote-left" alt=""></i>
+              </span>
+
+            
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <time datetime="" data-modal-time></time>
+
+              <div data-modal-text>
+               
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar" id="client-list-id">
+           
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #product
+      -->
+
+     
+
+      <article class="product" data-page="latest">
+
+        <header>
+          <h2 class="h2 article-title">Latest</h2>
+        </header>
+
+        <section class="product-posts">
+
+       
+          <ul class="product-posts-list" id="product-posts-list-id">
+  
+         
+          </ul>
+
+        </section>
+
+       
+
+
+        
+
+
+        
+
+
+      </article>
+
+
+
+
+      <div class="modal-container" data-modal-post-container>
+
+        <div class="overlay" data-post-overlay></div>
+
+        <section class="generic-modal" id="tmodal">
+
+          <button class="modal-close-btn" data-modal-post-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              <span  data-modal-post-img-style>
+                <i class="" alt=""  data-modal-post-img-icon></i>
+                <img alt="" data-modal-post-img-src>
+              </span>
+         
+            </figure>
+
+
+          
+          </div>
+
+          <div class="modal-content">
+
+            <h4 class="h3 modal-title" data-modal-post-title></h4>
+
+            <time datetime="" data-modal-post-time></time>
+
+            <div data-modal-post-text>
+             
+            </div>
+            <br>
+            <section class="contact-form">
+
+       
+      
+              <form action="#" class="form" id="product-post-form" data-form>
+    
+                <div class="input-wrapper">
+                  <input type="text" name="fullname" id="product-post-form-fullname" class="form-input" placeholder="Full name" required data-form-input>
+    
+                  <input type="email" style="display:none;" name="email" id="product-post-form-email" class="form-input" placeholder="Email address" data-form-input>
+
+                  <input type="text" style="display: none;" name="type" id="product-post-form-type" class="form-input" placeholder="type"  data-form-input>
+                </div>
+    
+                <textarea style="display:none;" id="product-post-form-textarea" name="product" class="form-input" placeholder="Your Message"  data-form-input></textarea>
+                <textarea style="display:none;" id="product-post-form-textarea-reviews" name="review" class="form-input" placeholder="Your Message"  data-form-input></textarea>
+    
+                <button class="form-btn" id="submitbutton" type="submit" disabled data-form-btn>
+                  <ion-icon name="paper-plane"></ion-icon>
+                  <span>Submit</span>
+                </button>
+    
+              </form>
+    
+            </section>
+
+          </div>
+
+        </section>
+
+
+
+
+
+      </div>
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52932828.95936838!2d-161.73140256710013!3d35.92828880006337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1711161648514!5m2!1sen!2sbd" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" id="contact-message-form" contact-data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" id="contact-form-fullname" class="form-input" placeholder="Full name" required contact-data-form-input>
+
+              <input type="email" name="email" id="contact-form-email"  class="form-input" placeholder="Email address" required contact-data-form-input>
+
+              <input type="text" style="display: none;" name="type" id="contact-form-type" class="form-input" placeholder="type" >
+
+            </div>
+
+            <textarea name="product" id="contact-form-message" class="form-input" placeholder="Your Message" required contact-data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled contact-data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+      
+
+ 
+  
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
+  integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
 
 </html>

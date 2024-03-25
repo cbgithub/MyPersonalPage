@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="The financial freedom journey of the budget developer.">
+  <meta name="author" content="Christopher Burdette">
+  <meta property="fb:app_id" content="550350708956700" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thebudgetdeveloper.com" />
+  <meta property="og:title" content="Chris Burdette | The Budget Developer" />
+  <meta property="og:image" content="https://thebudgetdeveloper.com/assets/images/logoTransparency.png" />
+  <meta property="og:description" content="The financial freedom journey of the budget developer." />
+  <title>Home - The Budget Developer</title>
+
+
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="assets/images/logoTransparency.png">
+  <link rel="apple-touch-icon" href="assets/images/logoTransparency.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/logoTransparency.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/logoTransparency.png">
+
+  <!--CDN scripts-->
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Icon Fonts-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
+    integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<div class="wrap">
+  <div id="profile" class="profile">
+  </div>
+  <div id="sociallinks" class="links">
+
+
+  </div>
+  <div class="footer"> Budget Developer Co. @ 2023</div>
+</div>
+</body>
+
+<script>
+
+  function getProfileData() {
+    var dataArray = null;
+
+    $.ajax({
+
+      // Our sample url to make request 
+      url:
+        'https://script.google.com/macros/s/AKfycbxWTYNyp4R824SgABa5qTEsx-t6v5tDdNvjAJWxBO-fl3ycghAnyqttWL8XjMf3-FF-/exec',
+
+      // Type of Request
+      type: "GET",
+
+      // Function to call when to
+      // request is ok 
+      success: function (data) {
+        dataArray = data;
+        dataArray.data.forEach(r => {
+
+          var img = document.createElement('img');
+          img.setAttribute("class", "photo");
+          img.setAttribute("width",r[4]);
+          img.setAttribute("height",r[5]);
+          img.setAttribute("text-align", "center");
+       
+          img.setAttribute("src", "" + r[3]);
+          var name = document.createElement("span");
+          name.setAttribute("class", "profile_name");
+          name.innerHTML = r[1];
+
+          var slogan = document.createElement("span");
+          slogan.setAttribute("class", "at");
+          slogan.innerHTML = r[2];
+
+          document.getElementById('profile').appendChild(img);
+          document.getElementById('profile').appendChild(name);
+          document.getElementById('profile').appendChild(slogan);
+
+
+        })
+
+
+
+
+      },
+
+      // Error handling 
+      error: function (error) {
+        console.log(`Error ${error}`);
+      }
+    });
+  }
+
+
+  function getProductData() {
+    var dataArray = null;
+
+    $.ajax({
+
+      // Our sample url to make request 
+      url:
+        'https://script.google.com/macros/s/AKfycbxwxX_RkZFldvKymxOpfCwS9E9W0kCLSAGsSnneg7YQdxSEsCdHAGMXfg2GqNp4nCFU/exec',
+
+      // Type of Request
+      type: "GET",
+
+      // Function to call when to
+      // request is ok 
+      success: function (data) {
+        dataArray = data;
+
+
+
+
+
+
+
+        dataArray.data.forEach(r => {
+
+          var card = document.createElement('div');
+          card.setAttribute("id", "item");
+          card.setAttribute("class", "card");
+          var a = document.createElement("a");
+          a.setAttribute("href", r[5]);
+
+
+
+
+          var icon = document.createElement("i");
+          icon.setAttribute("class", r[3]);
+          icon.innerHTML = " " + r[1];
+
+
+
+
+
+
+
+          var h3 = document.createElement("h3");
+
+          var paragraph = document.createElement("p");
+          paragraph.innerHTML = r[2];
+
+          h3.appendChild(icon);
+          card.appendChild(h3);
+          card.appendChild(paragraph);
+
+          a.append(card);
+
+
+          document.getElementById('sociallinks').appendChild(a);
+
+        })
+
+
+
+
+      },
+
+      // Error handling 
+      error: function (error) {
+        console.log(`Error ${error}`);
+      }
+    });
+
+
+  }
+
+  window.onload = function () {
+
+    getProfileData();
+    getProductData();
+
+  };
+
+</script>
+
+</html>
