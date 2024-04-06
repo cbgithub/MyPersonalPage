@@ -428,6 +428,7 @@ function getProductData(){
 
         var product_item_text = document.createElement("p");
         product_item_text.setAttribute("class", "product-text");
+        product_item_text.style.display = "none";
         product_item_text.innerHTML = r[2];
 
         var product_item_type = document.createElement("p");
@@ -441,6 +442,14 @@ function getProductData(){
         product_item_message.style.display = "none";
         product_item_message.innerHTML = r[5];
 
+        product_post_item.setAttribute("id", "data-products-item");
+        product_image.setAttribute("id", "data-product-img-src");
+        product_item_title.setAttribute("id", "data-product-title");
+        product_item_text.setAttribute("id", "data-product-text" );
+        product_item_type.setAttribute("id", "data-product-type");
+        product_item_message.setAttribute("id", "data-product-message")
+
+         /*
         if(r[7].toLowerCase() === "free" || r[7].toLowerCase() === "review"){
           product_post_item.setAttribute("id", "data-products-item");
           product_image.setAttribute("id", "data-product-img-src");
@@ -450,9 +459,10 @@ function getProductData(){
           product_item_message.setAttribute("id", "data-product-message")
   
         }
+       
         else{
           product_item_link.setAttribute("href", r[5]);
-        }
+        }*/
       
 
         product_meta.appendChild(product_category);
@@ -618,17 +628,43 @@ for (let i = 0; i < productItems.length; i++) {
 
     if(this.querySelector("#data-product-type").innerHTML == "free"){
       document.getElementById('product-post-form-email').style.display = "block";
+      document.getElementById('product-post-form-fullname').style.display = "block";
+      document.getElementById('ahrefRedirect').style.display = 'none';
+      document.getElementById('product-post-form-fullname').required = true;
       document.getElementById('product-post-form-email').required = true;
       document.getElementById('product-post-form-textarea').style.display = "none";
       document.getElementById('product-post-form-textarea-reviews').style.display = "none";
       document.getElementById('product-post-form-textarea').value = this.querySelector("#data-product-message").innerHTML;
+      document.getElementById('submitbutton').style.display = 'block';
     }
       
 
     if(this.querySelector("#data-product-type").innerHTML == "review"){
+      document.getElementById('submitbutton').style.display = 'block';
+      document.getElementById('product-post-form-fullname').style.display = "block";
+      document.getElementById('ahrefRedirect').style.display = 'none';
       document.getElementById('product-post-form-email').style.display = "none";
       document.getElementById('product-post-form-textarea-reviews').required = true;
       document.getElementById('product-post-form-textarea-reviews').style.display = "block";
+    }
+
+    //data-product-message
+
+    if(this.querySelector("#data-product-type").innerHTML == "product"){
+      document.getElementById('submitbutton').style.display = 'none';
+    
+      document.getElementById('product-post-form-fullname').style.display = "none";
+      document.getElementById('ahrefRedirect').style.display = 'block';
+      document.getElementById('product-post-form-email').style.display = "none";
+      document.getElementById('product-post-form-textarea-reviews').style.display = "none";
+      document.getElementById('product-post-form-textarea').style.display = "none";
+      document.getElementById('product-post-form-email').required = false;
+      document.getElementById('product-post-form-textarea-reviews').required = false;
+      document.getElementById('product-post-form-fullname').required = false;
+      document.getElementById('product-post-form-textarea').required = false;
+      
+      document.getElementById('ahrefRedirect').setAttribute('href', this.querySelector("#data-product-message").innerHTML);
+
     }
     
 
@@ -690,6 +726,7 @@ for (let i = 0; i < productFormInputs.length; i++) {
   productFormInputs[i].addEventListener("input", function () {
 
     // check form validation
+  
     if (productForm.checkValidity()) {
       productFormBtn.removeAttribute("disabled");
     } else {
@@ -823,11 +860,20 @@ productform.addEventListener('submit', e => {
   productmodalContainer.classList.toggle("active");
   productoverlay.classList.toggle("active");
   
-
-
- 
-  
   e.preventDefault()
+ if(document.getElementById('product-post-form-type').value == 'product'){
+
+
+  window.open(document.getElementById('ahrefRedirect').getAttribute('href'));
+  productmodalContainer.classList.toggle("active");
+  productoverlay.classList.toggle("active");
+  document.getElementById("loading").setAttribute("class", "loading-overlay");
+  
+
+ }
+ else {
+
+  
   fetch(productFormScriptURL, { method: 'POST', body: new FormData(productform) })
     .then(response => response.json().then(data => {
       
@@ -882,6 +928,11 @@ productform.addEventListener('submit', e => {
       productmodalText.innerHTML = "There was an issue with your request.";
 
     })
+ }
+
+ 
+  
+  
     
     
 })
