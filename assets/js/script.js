@@ -537,6 +537,7 @@ const testimonialsItem = document.querySelectorAll("#data-testimonials-item");
 
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const modalCloseFormBtn = document.querySelector("[data-modal-close-btn-form]");
 const overlay = document.querySelector("[data-overlay]");
 
 // modal variable
@@ -576,6 +577,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+modalCloseFormBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 }
