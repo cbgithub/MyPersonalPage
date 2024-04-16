@@ -398,7 +398,7 @@ function getProductData(){
         var product_image = document.createElement("img");
         product_image.setAttribute("src", r[6]);
         product_image.setAttribute("alt", r[1]);
-        product_image.setAttribute("width", 80);
+      
         product_image.setAttribute("loading", "lazy");
 
      
@@ -623,6 +623,7 @@ for (let i = 0; i < productItems.length; i++) {
   
     productmodalImg.setAttribute("alt",this.querySelector("#data-product-img-src").getAttribute("alt"));
     productmodalImg.setAttribute("loading",'lazy');
+    productmodalImg.setAttribute("width", 80);
 
     productmodalTitle.innerHTML = this.querySelector("#data-product-title").innerHTML;
     productmodalText.style.color = "white";
