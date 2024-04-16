@@ -397,7 +397,8 @@ function getProductData(){
         
         var product_image = document.createElement("img");
         product_image.setAttribute("src", r[6]);
-        product_image.setAttribute("alt", r[2]);
+        product_image.setAttribute("alt", r[1]);
+        product_image.setAttribute("width", 80);
         product_image.setAttribute("loading", "lazy");
 
      
